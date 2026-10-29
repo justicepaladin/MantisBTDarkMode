@@ -1,0 +1,37 @@
+/* This control is available with either the native light theme or a dark palette. */
+.mantisbt-darkmode-toggle {
+  position: fixed;
+  z-index: 1050;
+  left: 205px;
+  bottom: 16px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.mantisbt-darkmode-toggle form { margin: 0; }
+.mantisbt-darkmode-button {
+  display: block;
+  width: 100%;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.mantisbt-darkmode-button:hover,
+.mantisbt-darkmode-button:focus { background: rgba(128, 128, 128, .18); }
+.mantisbt-darkmode-button:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+.user-menu .mantisbt-darkmode-toggle {
+  position: static;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+}
+.user-menu .mantisbt-darkmode-button { padding: 8px 20px; }
+@media (max-width: 767px) {
+  .mantisbt-darkmode-toggle { left: 12px; }
+}

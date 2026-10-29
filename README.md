@@ -1,6 +1,6 @@
 # MantisBTDarkMode
 
-**A configurable dark-mode plugin for MantisBT 2.28.4.** It styles MantisBT's Ace and Bootstrap interface with a shared dark base and four color palettes.
+**A configurable dark and light theme plugin for MantisBT 2.28.4.** It styles MantisBT's Ace and Bootstrap interface with a shared dark base and four color palettes.
 
 **Created by:** Facundo Martín Mayordomo · [fmayordomo.com.ar](https://fmayordomo.com.ar)
 
@@ -11,13 +11,17 @@
 | Prefectura Blue | Graphite surfaces with calm blue accents. |
 | Graphite | Neutral dark gray with muted green-blue accents. |
 | Ocean | Deep blue surfaces with turquoise accents. |
-| Prefectura Sand | Warm sand accents over a charcoal background, inspired by the PNA sand-colored uniform. The hex values are a visual interpretation, not an official PNA color specification. 
+| Prefectura Sand | Warm sand accents over a charcoal background, inspired by the PNA sand-colored uniform. The hex values are a visual interpretation, not an official PNA color specification. |
 
 ## Installation
 
 1. Copy the `MantisBTDarkMode` directory into MantisBT's `plugins/` directory.
 2. Open **Manage → Manage Plugins** and install **MantisBTDarkMode**.
 3. Open the plugin configuration, choose a palette, and reload MantisBT.
+
+## Switching between dark and light mode
+
+Open the user menu in the top-right corner and select **Switch to light mode** or **Switch to dark mode**. Your choice is stored in your MantisBT account, so it follows you across browsers and devices. Light mode uses MantisBT's native styles; dark mode uses the palette selected by the administrator. The palette setting remains global.
 
 The palette setting is **global** and applies to all users. Uninstall the plugin from **Manage Plugins** to remove its styles. The plugin does not create database tables or modify issues.
 
@@ -30,6 +34,8 @@ The palette setting is **global** and applies to all users. Uninstall the plugin
 
 - `files/dark-mode.css` contains the shared interface rules.
 - `files/dark-mode-*.css` contains each palette's color variables.
+- `files/toggle.css` and `files/toggle.js` place the switch in the user menu.
+- `pages/toggle.php` saves each user's preference.
 - `tests/preview.html` is a standalone mockup for comparing the palettes in a browser.
 - `tests/smoke.php` checks palette selection and stylesheet loading. Run it with `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
 
@@ -39,7 +45,7 @@ To add a palette, create a `dark-mode-NAME.css` file, add `NAME` to `palettes()`
 
 # MantisBTDarkMode
 
-**Un plugin de modo oscuro configurable para MantisBT 2.28.4.** Aplica estilos a la interfaz Ace y Bootstrap de MantisBT con una base oscura y cuatro paletas de colores.
+**Un plugin configurable de temas claro y oscuro para MantisBT 2.28.4.** Aplica estilos a la interfaz Ace y Bootstrap de MantisBT con una base oscura y cuatro paletas de colores.
 
 **Creado por:** Facundo Martín Mayordomo · [fmayordomo.com.ar](https://fmayordomo.com.ar)
 
@@ -58,6 +64,10 @@ To add a palette, create a `dark-mode-NAME.css` file, add `NAME` to `palettes()`
 2. Abrí **Administrar → Gestionar plugins** e instalá **MantisBTDarkMode**.
 3. Entrá en la configuración del plugin, elegí una paleta y recargá MantisBT.
 
+## Cambiar entre modo oscuro y claro
+
+Abrí el menú de usuario, arriba a la derecha, y elegí **Cambiar a modo claro** o **Cambiar a modo oscuro**. La elección se guarda en tu cuenta de MantisBT y se mantiene entre navegadores y equipos. El modo claro usa los estilos originales de MantisBT; el modo oscuro usa la paleta elegida por el administrador. La paleta sigue siendo global.
+
 La paleta se configura de forma **global** y se aplica a todos los usuarios. Para quitar los estilos, desinstalá el plugin desde **Gestionar plugins**. El plugin no crea tablas en la base de datos ni modifica incidencias.
 
 ## Compatibilidad
@@ -69,6 +79,8 @@ La paleta se configura de forma **global** y se aplica a todos los usuarios. Par
 
 - `files/dark-mode.css` contiene las reglas comunes de la interfaz.
 - `files/dark-mode-*.css` contiene las variables de color de cada paleta.
+- `files/toggle.css` y `files/toggle.js` colocan el selector en el menú de usuario.
+- `pages/toggle.php` guarda la preferencia de cada usuario.
 - `tests/preview.html` es una maqueta independiente para comparar las paletas en un navegador.
 - `tests/smoke.php` comprueba la selección de paletas y la carga de hojas de estilo. Ejecutala con `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
 
