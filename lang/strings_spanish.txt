@@ -1,0 +1,8 @@
+<?php
+$s_plugin_MantisBTDarkMode_title = 'MantisBT Modo Oscuro';
+$s_plugin_MantisBTDarkMode_description = 'Paletas oscuras para MantisBT 2.28.4.';
+$s_plugin_MantisBTDarkMode_palette = 'Paleta de colores';
+$s_plugin_MantisBTDarkMode_palette_help = 'La paleta elegida se aplica a todos los usuarios. Recargá la página para ver el cambio.';
+$s_plugin_MantisBTDarkMode_palette_prefectura = 'Azul Prefectura';
+$s_plugin_MantisBTDarkMode_palette_grafito = 'Grafito';
+$s_plugin_MantisBTDarkMode_palette_oceano = 'Océano';

@@ -1,0 +1,20 @@
+:root {
+  --dm-page: #27292b;
+  --dm-navbar: #303235;
+  --dm-sidebar: #2b2e31;
+  --dm-panel: #202224;
+  --dm-panel-alt: #292c2f;
+  --dm-row: #1c1e20;
+  --dm-row-alt: #25282a;
+  --dm-hover: #353b3d;
+  --dm-border: #41494d;
+  --dm-text: #e0e3e5;
+  --dm-muted: #b6bec2;
+  --dm-link: #8acdda;
+  --dm-link-hover: #b7eaf1;
+  --dm-accent: #477b85;
+  --dm-accent-hover: #58929e;
+  --dm-accent-text: #f4ffff;
+  --dm-input: #191b1d;
+  --dm-focus: #9cdee7;
+}

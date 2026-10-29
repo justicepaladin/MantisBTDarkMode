@@ -1,0 +1,2 @@
+# Local rendered previews are generated from tests/preview.html.
+tests/previews/*.png

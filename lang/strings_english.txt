@@ -1,0 +1,8 @@
+<?php
+$s_plugin_MantisBTDarkMode_title = 'MantisBT Dark Mode';
+$s_plugin_MantisBTDarkMode_description = 'Dark palettes for MantisBT 2.28.4.';
+$s_plugin_MantisBTDarkMode_palette = 'Color palette';
+$s_plugin_MantisBTDarkMode_palette_help = 'The selected palette applies to all users. Reload the page to see the change.';
+$s_plugin_MantisBTDarkMode_palette_prefectura = 'Prefectura Blue';
+$s_plugin_MantisBTDarkMode_palette_grafito = 'Graphite';
+$s_plugin_MantisBTDarkMode_palette_oceano = 'Ocean';

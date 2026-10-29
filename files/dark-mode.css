@@ -1,0 +1,212 @@
+/* Shared MantisBT 2.28.4 / Ace overrides. Palette variables live in dark-mode-*.css. */
+:root { color-scheme: dark; }
+html, body {
+  background: var(--dm-page) !important;
+  color: var(--dm-text) !important;
+}
+body, .main-container, .main-container:before, .main-content, .page-content,
+.skin-3 .main-container:before, .footer, .footer-content {
+  background: var(--dm-page) !important;
+  color: var(--dm-text) !important;
+}
+a, .widget-body a, .table a, .breadcrumbs a, .nav-recent a {
+  color: var(--dm-link) !important;
+}
+a:hover, a:focus, .widget-body a:hover, .table a:hover {
+  color: var(--dm-link-hover) !important;
+}
+.text-muted, .help-block, .muted, small, .small, .nav-recent {
+  color: var(--dm-muted) !important;
+}
+hr, .footer-content { border-color: var(--dm-border) !important; }
+
+/* Top navigation, breadcrumbs and sidebar. */
+.navbar, .navbar-container, .navbar-header, .ace-nav > li,
+.ace-nav > li > a, .navbar .navbar-brand {
+  background: var(--dm-navbar) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.ace-nav > li > a:hover, .ace-nav > li.open > a,
+.ace-nav > li > a:focus { background: var(--dm-hover) !important; }
+.breadcrumbs { background: var(--dm-panel) !important; border-color: var(--dm-border) !important; }
+.breadcrumb, .breadcrumb > li + li:before { color: var(--dm-muted) !important; }
+.sidebar, .skin-3 .sidebar, .nav-list, .sidebar-shortcuts,
+.sidebar-toggle, .skin-3 .sidebar-toggle {
+  background: var(--dm-sidebar) !important;
+  border-color: var(--dm-border) !important;
+  color: var(--dm-text) !important;
+}
+.nav-list > li, .nav-list > li > a, .skin-3 .nav-list > li > a,
+.skin-3 .nav-list > li.active > a, .sidebar .menu-text,
+.sidebar.menu-min .nav-list > li > a > .menu-text {
+  background: var(--dm-sidebar) !important;
+  border-color: var(--dm-border) !important;
+  color: var(--dm-muted) !important;
+}
+.nav-list > li:hover > a, .nav-list > li.active > a,
+.skin-3 .nav-list > li:hover > a, .skin-3 .nav-list > li.active > a,
+.nav-list > li.open > a, .nav-list > li .submenu {
+  background: var(--dm-hover) !important;
+  color: var(--dm-link) !important;
+  border-color: var(--dm-border) !important;
+}
+.nav-list > li .submenu > li > a,
+.nav-list > li .submenu > li > a:hover { color: var(--dm-link) !important; }
+.menu-icon, .sidebar-toggle .ace-icon, .nav-list > li.active:before {
+  color: var(--dm-link) !important;
+}
+.nav-list > li.active:before, .nav-list > li:hover:before {
+  background: var(--dm-accent) !important;
+}
+.nav-list > li.active > a:before { border-right-color: var(--dm-accent) !important; }
+
+/* Panels and filter bar. */
+.widget-box, .widget-body, .widget-main, .well, .panel,
+.panel-body, .tab-content, .modal-content, .popover,
+.alert:not(.alert-danger):not(.alert-warning):not(.alert-success) {
+  background: var(--dm-panel) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.widget-header, .widget-header.header-color-blue, .widget-color-blue2 > .widget-header,
+.widget-color-blue > .widget-header, .panel-heading, .modal-header {
+  background: var(--dm-accent) !important;
+  color: var(--dm-accent-text) !important;
+  border-color: var(--dm-accent) !important;
+}
+.widget-header *, .widget-header a, .widget-title,
+.modal-header .modal-title { color: var(--dm-accent-text) !important; }
+.widget-toolbox, .modal-footer, .panel-footer, .form-actions {
+  background: var(--dm-panel-alt) !important;
+  border-color: var(--dm-border) !important;
+}
+.widget-box .widget-body .table-responsive,
+.table-responsive { background: var(--dm-panel) !important; }
+.filters, .filters table, table.filters,
+table.filters td.category, table.filters th.category {
+  background: var(--dm-panel) !important;
+  color: var(--dm-link) !important;
+  border-color: var(--dm-border) !important;
+}
+table.filters td.category label, table.filters th.category label,
+td.category, th.category, td.category label, th.category label {
+  background: var(--dm-panel-alt) !important;
+  color: var(--dm-link) !important;
+}
+
+/* Issue list and other data tables. Keep status and priority indicator colors. */
+.table, .table-bordered, .table-responsive > .table {
+  background: var(--dm-panel) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.table > thead > tr, .table > thead > tr > th,
+.table > tbody > tr > th, .table > tfoot > tr > th {
+  background: var(--dm-panel-alt) !important;
+  color: var(--dm-link) !important;
+  border-color: var(--dm-border) !important;
+}
+.table > tbody > tr, .table > tbody > tr > td,
+.table > tfoot > tr, .table > tfoot > tr > td {
+  background: var(--dm-row) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd),
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+#buglist > tbody > tr:nth-of-type(odd),
+#buglist > tbody > tr:nth-of-type(odd) > td {
+  background: var(--dm-row-alt) !important;
+}
+.table-hover > tbody > tr:hover, .table-hover > tbody > tr:hover > td,
+#buglist > tbody > tr:hover, #buglist > tbody > tr:hover > td {
+  background: var(--dm-hover) !important;
+}
+.table > tbody > tr > td.category, .table > tbody > tr > th.category,
+.table > tbody > tr > td.bugnote-note { background: var(--dm-panel-alt) !important; }
+tr.spacer, .sticky-separator { background: var(--dm-page) !important; }
+.bugnote-private, .bugnote-private > td { background: #3a3325 !important; }
+.issue-status { border-bottom-color: var(--dm-muted) !important; }
+
+/* Forms and controls. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+textarea, select, .form-control, .input-sm, .nav-search .nav-search-input,
+.select2-container .select2-choice, .select2-container-multi .select2-choices {
+  background: var(--dm-input) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+  box-shadow: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--dm-muted) !important; opacity: 1; }
+input:focus, textarea:focus, select:focus, .form-control:focus,
+.nav-search .nav-search-input:focus {
+  border-color: var(--dm-focus) !important;
+  outline-color: var(--dm-focus) !important;
+}
+input:disabled, textarea:disabled, select:disabled,
+.form-control:disabled { opacity: .65; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--dm-accent); }
+.btn-default, .btn-white, .btn.btn-white,
+.pagination > li > a, .pagination > li > span,
+.pager > li > a, .nav-tabs > li > a {
+  background: var(--dm-panel-alt) !important;
+  color: var(--dm-link) !important;
+  border-color: var(--dm-border) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+.btn-default:hover, .btn-default:focus, .btn-white:hover, .btn-white:focus,
+.pagination > li > a:hover, .pager > li > a:hover,
+.nav-tabs > li > a:hover {
+  background: var(--dm-hover) !important;
+  color: var(--dm-link-hover) !important;
+  border-color: var(--dm-focus) !important;
+}
+.btn-primary, .btn.btn-primary, .pagination > .active > a,
+.pagination > .active > span, .nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+  background: var(--dm-accent) !important;
+  color: var(--dm-accent-text) !important;
+  border-color: var(--dm-accent) !important;
+}
+.btn-primary:hover, .btn.btn-primary:hover,
+.pagination > .active > a:hover {
+  background: var(--dm-accent-hover) !important;
+  border-color: var(--dm-accent-hover) !important;
+}
+.pagination > .disabled > a, .pagination > .disabled > span,
+.btn:disabled { opacity: .58; }
+.dropdown-menu, .dropdown-menu .search, .select2-drop,
+.select2-results, .bootstrap-datetimepicker-widget,
+.bootstrap-datetimepicker-widget .datepicker,
+.ui-autocomplete {
+  background: var(--dm-panel) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.dropdown-menu > li > a, .select2-results .select2-result-label,
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table th {
+  color: var(--dm-text) !important;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+.select2-results .select2-highlighted, .ui-menu-item:hover,
+.bootstrap-datetimepicker-widget table td:hover {
+  background: var(--dm-hover) !important;
+  color: var(--dm-link-hover) !important;
+}
+.dropdown-menu .divider, .nav-tabs { border-color: var(--dm-border) !important; }
+
+/* Secondary content: code, notes and dialogs. */
+pre, code, .code, .bug-attachment-preview-text, blockquote,
+.profile-activity, .list-group-item {
+  background: var(--dm-panel-alt) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
+}
+.profile-activity:hover, .list-group-item:hover {
+  background: var(--dm-hover) !important;
+}
+.modal-backdrop { background: #050809 !important; }
+::selection { background: var(--dm-accent); color: var(--dm-accent-text); }

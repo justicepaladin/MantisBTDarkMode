@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MantisBTDarkMode · vista previa</title>
+  <link id="palette" rel="stylesheet" href="../files/dark-mode-prefectura.css">
+  <link rel="stylesheet" href="../files/dark-mode.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 13px Arial, sans-serif; }
+    .navbar { height: 44px; padding: 12px 16px; }
+    .navbar-brand { font-size: 16px; }
+    .layout { display: flex; min-height: calc(100vh - 44px); }
+    .sidebar { width: 190px; flex: none; border-right: 1px solid; }
+    .nav-list { list-style: none; padding: 0; margin: 0; }
+    .nav-list > li > a { display: block; padding: 16px; border-bottom: 1px solid; text-decoration: none; }
+    .main-content { flex: 1; min-width: 0; }
+    .breadcrumbs { padding: 14px; border-bottom: 1px solid; }
+    .page-content { padding: 14px; }
+    .widget-box { border: 1px solid; margin-bottom: 18px; }
+    .widget-header { padding: 8px 12px; font-size: 16px; }
+    .widget-body { padding: 8px; }
+    .table { width: 100%; border-collapse: collapse; }
+    .table th, .table td { padding: 8px 6px; border-bottom: 1px solid; text-align: left; }
+    .table th { font-weight: 600; }
+    .filters td { width: 25%; }
+    .filters td.category { padding-bottom: 2px; }
+    .filters .value { padding-top: 2px; }
+    .toolbar { padding: 2px 0 10px; }
+    .btn { display: inline-block; padding: 6px 10px; border: 1px solid; text-decoration: none; }
+    .form-control { padding: 6px; border: 1px solid; }
+    .status { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; }
+    .label-new { background: #f58c93; } .label-accepted { background: #ffca76; }
+    .label-closed { background: #d4d4d4; } .label-resolved { background: #b8eb8a; }
+    .preview-control { float: right; }
+  </style>
+</head>
+<body>
+  <div class="navbar"><span class="navbar-brand">PNA-Soporte</span><span class="preview-control">Vista previa · <select id="palette-choice"><option value="prefectura">Azul Prefectura</option><option value="grafito">Grafito</option><option value="oceano">Océano</option></select></span></div>
+  <div class="layout">
+    <aside class="sidebar"><ul class="nav-list"><li><a href="#">◉ &nbsp; Mi Vista</a></li><li class="active"><a href="#">▤ &nbsp; Ver incidencias</a></li><li><a href="#">✎ &nbsp; Reportar incidencia</a></li></ul></aside>
+    <main class="main-content">
+      <div class="breadcrumbs"><a href="#">usuario de prueba</a> &nbsp; <span class="text-muted">/ desarrollador</span></div>
+      <div class="page-content">
+        <section class="widget-box"><div class="widget-header">⚑ &nbsp; Filtros</div><div class="widget-body">
+          <div class="toolbar"><a class="btn btn-default" href="#">Restablecer</a> <a class="btn btn-default" href="#">Guardar</a> &nbsp; Cargar <select class="form-control"><option>TODAS</option></select></div>
+          <table class="table filters"><tbody><tr><td class="category">Informador</td><td class="category">Asignada a</td><td class="category">Monitorizado por</td><td class="category">Prioridad</td></tr><tr><td class="value">Cualquiera</td><td class="value">Cualquiera</td><td class="value">Cualquiera</td><td class="value">Cualquiera</td></tr><tr><td class="category">Categoría</td><td class="category">Estado</td><td class="category">Resolución</td><td class="category">Fecha de envío</td></tr><tr><td>General</td><td>Todos</td><td>Cualquiera</td><td>Cualquiera</td></tr></tbody></table>
+          <div class="toolbar"><input class="form-control" placeholder="Buscar"> <a class="btn btn-primary" href="#">Filtrar</a></div>
+        </div></section>
+        <section class="widget-box"><div class="widget-header">▣ &nbsp; Visualizando incidencias <small>1 - 6 / 6</small></div><div class="widget-body">
+          <div class="toolbar"><a class="btn btn-default" href="#">Imprimir informes</a> <a class="btn btn-default" href="#">Exportar a CSV</a> <a class="btn btn-default" href="#">Exportar a Excel</a></div>
+          <table id="buglist" class="table table-striped table-hover"><thead><tr><th>Id.</th><th>Informador</th><th>Categoría</th><th>Gravedad</th><th>Estado</th><th>Fecha de envío</th><th>Resumen</th></tr></thead><tbody>
+            <tr><td><a href="#">0020154</a></td><td><a href="#">usuario1</a></td><td>General</td><td>menor</td><td><span class="status label-closed"></span>cerrada</td><td>06/08/2026</td><td><a href="#">Solicitud de IP para el balanceador de carga</a></td></tr>
+            <tr><td><a href="#">0011787</a></td><td><a href="#">usuario2</a></td><td>General</td><td>menor</td><td><span class="status label-closed"></span>cerrada</td><td>02/06/2025</td><td><a href="#">Renovación de certificado digital</a></td></tr>
+            <tr><td><a href="#">0006822</a></td><td><a href="#">usuario3</a></td><td>General</td><td>menor</td><td><span class="status label-closed"></span>cerrada</td><td>22/11/2024</td><td><a href="#">Memoria anual</a></td></tr>
+            <tr><td><a href="#">0022176</a></td><td><a href="#">usuario4</a></td><td>General</td><td>menor</td><td><span class="status label-new"></span>nueva</td><td>28/10/2026</td><td><a href="#">Actualizar formulario de prueba</a></td></tr>
+            <tr><td><a href="#">0022172</a></td><td><a href="#">usuario5</a></td><td>General</td><td>menor</td><td><span class="status label-accepted"></span>aceptada</td><td>28/10/2026</td><td><a href="#">Origen de solicitud</a></td></tr>
+            <tr><td><a href="#">0022148</a></td><td><a href="#">usuario6</a></td><td>General</td><td>menor</td><td><span class="status label-resolved"></span>resuelta</td><td>27/10/2026</td><td><a href="#">Revisar carga</a></td></tr>
+          </tbody></table>
+        </div></section>
+      </div>
+    </main>
+  </div>
+  <script>
+    const select = document.getElementById('palette-choice');
+    const name = new URLSearchParams(location.search).get('palette');
+    if (['prefectura', 'grafito', 'oceano'].includes(name)) select.value = name;
+    function setPalette() { document.getElementById('palette').href = '../files/dark-mode-' + select.value + '.css'; }
+    select.addEventListener('change', setPalette);
+    setPalette();
+  </script>
+</body>
+</html>

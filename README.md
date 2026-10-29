@@ -29,15 +29,13 @@ Para revertir el cambio visual, desinstalar **MantisBTDarkMode** desde la pantal
 - `MantisBTDarkMode.php`: registro, lista permitida de paletas y carga de CSS.
 - `pages/config*.php`: selección administrativa protegida por permisos y token CSRF.
 - `tests/preview.html`: maqueta local para comparar paletas; no muestra datos ni HTML real de la instalación.
-- `tests/previews/`: capturas de esa maqueta para revisar los colores sin instalar el plugin.
 
 Para agregar una paleta, copiar uno de los archivos `dark-mode-*.css`, ajustar las variables `--dm-*`, añadir su identificador a `palettes()` y agregar la etiqueta en los archivos de idioma. El identificador debe corresponder al nombre del archivo.
 
 ## Alcance
 
-El diseño se preparó para MantisBT 2.28.4 y PHP 8.4 (todo 100% actualizado). Es necesario revisar visualmente con una cuenta de prueba las páginas de lista de incidencias, detalle, edición, administración y acceso antes de usarlo para toda la organización.
+El diseño se preparó para MantisBT 2.28.4. Se recomienda revisar con una cuenta de prueba las páginas de lista de incidencias, detalle, edición, administración y acceso antes de usarlo para toda la organización.
 
 La prueba rápida de carga de hojas y validación de nombres se ejecuta con `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
 
 Abrí [`tests/preview.html`](tests/preview.html) en un navegador para comparar las tres paletas. Es una maqueta local, independiente de MantisBT.
-
