@@ -24,7 +24,7 @@ class MantisBTDarkModePlugin extends MantisPlugin {
 	}
 
 	public static function palettes() {
-		return array( 'prefectura', 'grafito', 'oceano' );
+		return array( 'prefectura', 'grafito', 'oceano', 'arena' );
 	}
 
 	public function add_css( $p_event ) {

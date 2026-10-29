@@ -1,41 +1,80 @@
 # MantisBTDarkMode
 
-Plugin de modo oscuro para **MantisBT 2.28.4**. Toma como referencia la integración por `EVENT_LAYOUT_RESOURCES` de Tagirijus/MantisBTDarkTheme, pero usa CSS nuevo, organizado en una hoja común y tres paletas.
+**A configurable dark-mode plugin for MantisBT 2.28.4.** It styles MantisBT's Ace and Bootstrap interface with a shared dark base and four color palettes.
+
+**Created by:** Facundo Martín Mayordomo · [fmayordomo.com.ar](https://fmayordomo.com.ar)
+
+## Palettes
+
+| Palette | Description |
+| --- | --- |
+| Prefectura Blue | Graphite surfaces with calm blue accents. |
+| Graphite | Neutral dark gray with muted green-blue accents. |
+| Ocean | Deep blue surfaces with turquoise accents. |
+| Prefectura Sand | Warm sand accents over a charcoal background, inspired by the PNA sand-colored uniform. The hex values are a visual interpretation, not an official PNA color specification. |
+
+The Argentine Naval Prefecture (PNA) describes some of its uniforms as sand-colored in its [official procurement document](https://www.argentina.gob.ar/sites/default/files/titulo_iii_662025.pdf).
+
+## Installation
+
+1. Copy the `MantisBTDarkMode` directory into MantisBT's `plugins/` directory.
+2. Open **Manage → Manage Plugins** and install **MantisBTDarkMode**.
+3. Open the plugin configuration, choose a palette, and reload MantisBT.
+
+The palette setting is **global** and applies to all users. Uninstall the plugin from **Manage Plugins** to remove its styles. The plugin does not create database tables or modify issues.
+
+## Compatibility
+
+- MantisBT 2.28.4
+- PHP 8.4 was used for validation on the Prefectura installation.
+
+## Development
+
+- `files/dark-mode.css` contains the shared interface rules.
+- `files/dark-mode-*.css` contains each palette's color variables.
+- `tests/preview.html` is a standalone mockup for comparing the palettes in a browser.
+- `tests/smoke.php` checks palette selection and stylesheet loading. Run it with `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
+
+To add a palette, create a `dark-mode-NAME.css` file, add `NAME` to `palettes()` in `MantisBTDarkMode.php`, and add its translated label to both language files.
+
+---
+
+# MantisBTDarkMode
+
+**Un plugin de modo oscuro configurable para MantisBT 2.28.4.** Aplica estilos a la interfaz Ace y Bootstrap de MantisBT con una base oscura y cuatro paletas de colores.
 
 **Creado por:** Facundo Martín Mayordomo · [fmayordomo.com.ar](https://fmayordomo.com.ar)
 
 ## Paletas
 
-| Opción | Aspecto |
+| Paleta | Descripción |
 | --- | --- |
-| Azul Prefectura | Azul sobrio y fondo grafito. |
-| Grafito | Neutra, con acentos verde grisáceos. |
-| Océano | Azul profundo y acentos turquesa. |
+| Azul Prefectura | Superficies grafito con acentos azules sobrios. |
+| Grafito | Grises oscuros neutros con acentos verde azulados. |
+| Océano | Superficies azul profundo con acentos turquesa. |
+| Arena Prefectura | Acentos arena cálidos sobre fondo carbón, inspirados en el uniforme color arena de PNA. Los valores hexadecimales son una interpretación visual, no una especificación oficial de color de PNA. |
 
-La selección es **global**: afecta a todos los usuarios cuando el plugin está instalado. Se cambia desde **Administrar → Gestionar plugins → MantisBTDarkMode**. Los colores de los indicadores de estado y prioridad se dejan a MantisBT para conservar su significado.
+La Prefectura Naval Argentina menciona uniformes color arena en su [documentación oficial de contratación](https://www.argentina.gob.ar/sites/default/files/titulo_iii_662025.pdf).
 
 ## Instalación
 
-1. Copiar esta carpeta como `plugins/MantisBTDarkMode/` dentro de MantisBT.
-2. En **Administrar → Gestionar plugins**, instalar **MantisBTDarkMode**.
-3. Abrir la configuración del plugin y elegir la paleta. Recargar la página del navegador.
+1. Copiá la carpeta `MantisBTDarkMode` dentro del directorio `plugins/` de MantisBT.
+2. Abrí **Administrar → Gestionar plugins** e instalá **MantisBTDarkMode**.
+3. Entrá en la configuración del plugin, elegí una paleta y recargá MantisBT.
 
-Para revertir el cambio visual, desinstalar **MantisBTDarkMode** desde la pantalla de plugins. No crea tablas ni modifica incidencias.
+La paleta se configura de forma **global** y se aplica a todos los usuarios. Para quitar los estilos, desinstalá el plugin desde **Gestionar plugins**. El plugin no crea tablas en la base de datos ni modifica incidencias.
 
-## Archivos y personalización
+## Compatibilidad
 
-- `files/dark-mode.css`: reglas comunes para Ace, Bootstrap y páginas de MantisBT.
-- `files/dark-mode-*.css`: variables de color para cada paleta.
-- `MantisBTDarkMode.php`: registro, lista permitida de paletas y carga de CSS.
-- `pages/config*.php`: selección administrativa protegida por permisos y token CSRF.
-- `tests/preview.html`: maqueta local para comparar paletas; no muestra datos ni HTML real de la instalación.
+- MantisBT 2.28.4
+- PHP 8.4 utilizado para la validación en la instalación de Prefectura.
 
-Para agregar una paleta, copiar uno de los archivos `dark-mode-*.css`, ajustar las variables `--dm-*`, añadir su identificador a `palettes()` y agregar la etiqueta en los archivos de idioma. El identificador debe corresponder al nombre del archivo.
+## Desarrollo
 
-## Alcance
+- `files/dark-mode.css` contiene las reglas comunes de la interfaz.
+- `files/dark-mode-*.css` contiene las variables de color de cada paleta.
+- `tests/preview.html` es una maqueta independiente para comparar las paletas en un navegador.
+- `tests/smoke.php` comprueba la selección de paletas y la carga de hojas de estilo. Ejecutala con `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
 
-El diseño se preparó para MantisBT 2.28.4. Se recomienda revisar con una cuenta de prueba las páginas de lista de incidencias, detalle, edición, administración y acceso antes de usarlo para toda la organización.
+Para agregar una paleta, creá un archivo `dark-mode-NOMBRE.css`, agregá `NOMBRE` a `palettes()` en `MantisBTDarkMode.php` y sumá su etiqueta traducida en los dos archivos de idioma.
 
-La prueba rápida de carga de hojas y validación de nombres se ejecuta con `php -d zend.assertions=1 -d assert.exception=1 tests/smoke.php`.
-
-Abrí [`tests/preview.html`](tests/preview.html) en un navegador para comparar las tres paletas. Es una maqueta local, independiente de MantisBT.

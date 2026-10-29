@@ -6,3 +6,4 @@ $s_plugin_MantisBTDarkMode_palette_help = 'La paleta elegida se aplica a todos l
 $s_plugin_MantisBTDarkMode_palette_prefectura = 'Azul Prefectura';
 $s_plugin_MantisBTDarkMode_palette_grafito = 'Grafito';
 $s_plugin_MantisBTDarkMode_palette_oceano = 'Océano';
+$s_plugin_MantisBTDarkMode_palette_arena = 'Arena Prefectura';
