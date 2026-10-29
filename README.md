@@ -11,9 +11,7 @@
 | Prefectura Blue | Graphite surfaces with calm blue accents. |
 | Graphite | Neutral dark gray with muted green-blue accents. |
 | Ocean | Deep blue surfaces with turquoise accents. |
-| Prefectura Sand | Warm sand accents over a charcoal background, inspired by the PNA sand-colored uniform. The hex values are a visual interpretation, not an official PNA color specification. |
-
-The Argentine Naval Prefecture (PNA) describes some of its uniforms as sand-colored in its [official procurement document](https://www.argentina.gob.ar/sites/default/files/titulo_iii_662025.pdf).
+| Prefectura Sand | Warm sand accents over a charcoal background, inspired by the PNA sand-colored uniform. The hex values are a visual interpretation, not an official PNA color specification. 
 
 ## Installation
 
@@ -53,8 +51,6 @@ To add a palette, create a `dark-mode-NAME.css` file, add `NAME` to `palettes()`
 | Grafito | Grises oscuros neutros con acentos verde azulados. |
 | Océano | Superficies azul profundo con acentos turquesa. |
 | Arena Prefectura | Acentos arena cálidos sobre fondo carbón, inspirados en el uniforme color arena de PNA. Los valores hexadecimales son una interpretación visual, no una especificación oficial de color de PNA. |
-
-La Prefectura Naval Argentina menciona uniformes color arena en su [documentación oficial de contratación](https://www.argentina.gob.ar/sites/default/files/titulo_iii_662025.pdf).
 
 ## Instalación
 
