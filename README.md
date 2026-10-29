@@ -11,6 +11,7 @@ Plugin de modo oscuro para **MantisBT 2.28.4**. Toma como referencia la integrac
 | Azul Prefectura | Azul sobrio y fondo grafito. |
 | Grafito | Neutra, con acentos verde grisáceos. |
 | Océano | Azul profundo y acentos turquesa. |
+| Arena Prefectura | Fondo oscuro con acentos arena cálidos inspirados en el uniforme de PNA. |
 
 La selección es **global**: afecta a todos los usuarios cuando el plugin está instalado. Se cambia desde **Administrar → Gestionar plugins → MantisBTDarkMode**. Los colores de los indicadores de estado y prioridad se dejan a MantisBT para conservar su significado.
 

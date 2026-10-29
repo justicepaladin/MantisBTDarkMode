@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-  <div class="navbar"><span class="navbar-brand">PNA-Soporte</span><span class="preview-control">Vista previa · <select id="palette-choice"><option value="prefectura">Azul Prefectura</option><option value="grafito">Grafito</option><option value="oceano">Océano</option></select></span></div>
+  <div class="navbar"><span class="navbar-brand">PNA-Soporte</span><span class="preview-control">Vista previa · <select id="palette-choice"><option value="prefectura">Azul Prefectura</option><option value="grafito">Grafito</option><option value="oceano">Océano</option><option value="arena">Arena Prefectura</option></select></span></div>
   <div class="layout">
     <aside class="sidebar"><ul class="nav-list"><li><a href="#">◉ &nbsp; Mi Vista</a></li><li class="active"><a href="#">▤ &nbsp; Ver incidencias</a></li><li><a href="#">✎ &nbsp; Reportar incidencia</a></li></ul></aside>
     <main class="main-content">
@@ -65,7 +65,7 @@
   <script>
     const select = document.getElementById('palette-choice');
     const name = new URLSearchParams(location.search).get('palette');
-    if (['prefectura', 'grafito', 'oceano'].includes(name)) select.value = name;
+    if (['prefectura', 'grafito', 'oceano', 'arena'].includes(name)) select.value = name;
     function setPalette() { document.getElementById('palette').href = '../files/dark-mode-' + select.value + '.css'; }
     select.addEventListener('change', setPalette);
     setPalette();
