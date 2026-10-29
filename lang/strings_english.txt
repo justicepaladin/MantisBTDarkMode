@@ -7,3 +7,5 @@ $s_plugin_MantisBTDarkMode_palette_prefectura = 'Prefectura Blue';
 $s_plugin_MantisBTDarkMode_palette_grafito = 'Graphite';
 $s_plugin_MantisBTDarkMode_palette_oceano = 'Ocean';
 $s_plugin_MantisBTDarkMode_palette_arena = 'Prefectura Sand';
+$s_plugin_MantisBTDarkMode_switch_to_light = 'Switch to light mode';
+$s_plugin_MantisBTDarkMode_switch_to_dark = 'Switch to dark mode';
