@@ -26,7 +26,7 @@ The palette setting is **global** and applies to all users. Uninstall the plugin
 ## Compatibility
 
 - MantisBT 2.28.4
-- PHP 8.4 was used for validation on the Prefectura installation.
+- PHP 8.4.
 
 ## Development
 
@@ -67,7 +67,7 @@ La paleta se configura de forma **global** y se aplica a todos los usuarios. Par
 ## Compatibilidad
 
 - MantisBT 2.28.4
-- PHP 8.4 utilizado para la validación en la instalación de Prefectura.
+- PHP 8.4.
 
 ## Desarrollo
 
